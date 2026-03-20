@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ing. Richard Liehmann</title>
+<style>
+:root {
+  --bg: #eef3f8;
+  --panel: #f8fbff;
+  --panel-strong: #ffffff;
+  --text: #0f172a;
+  --muted: #5b6778;
+  --line: #d7e3f4;
+  --accent: #111111;
+  --accent-soft: #f2f2f2;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #edf2f7 0%, #f4f7fb 100%);
+  color: var(--text);
+}
+a { color: inherit; text-decoration: none; }
+
+.page { padding: 22px; }
+.shell { max-width: 1180px; margin: 0 auto; }
+
+.panel {
+  background: rgba(255,255,255,0.62);
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  margin-bottom: 18px;
+}
+.brand {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) 320px;
+  gap: 30px;
+  min-height: 720px;
+  overflow: hidden;
+}
+.hero-copy { padding: 54px 36px 34px 36px; }
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+h1 {
+  margin: 0;
+  font-size: clamp(3.9rem, 8vw, 7.1rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  max-width: 820px;
+}
+.hero-text {
+  margin-top: 28px;
+  max-width: 670px;
+  font-size: 1.06rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.button-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  border: 1px solid var(--line);
+  background: var(--panel-strong);
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent;
+}
+.btn-secondary {
+  color: var(--text);
+  background: rgba(255,255,255,0.72);
+}
+
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 42px;
+}
+.mini-card {
+  background: rgba(255,255,255,0.6);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 18px 16px 16px;
+}
+.mini-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+.mini-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.hero-image {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.95) contrast(1.02);
+}
+
+.section {
+  margin-top: 26px;
+  padding: 28px;
+}
+
+.section-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 22px;
+}
+.section-title {
+  margin: 0;
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+.section-intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 520px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.service-card {
+  background: rgba(255,255,255,0.72);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 22px;
+}
+.service-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.service-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+.service-card p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.service-card ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.service-card li {
+  padding: 6px 0;
+  border-top: 1px solid var(--line);
+  color: #243244;
+  line-height: 1.4;
+}
+
+.speaker-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.2fr;
+  min-height: 560px;
+  overflow: hidden;
+}
+.speaker-left {
+  padding: 28px;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(242,242,242,0.65) 0%, rgba(255,255,255,0.35) 100%);
+  border-right: 1px solid var(--line);
+}
+.bio-card {
+  max-width: 420px;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+.bio-card img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 20px;
+  border: 4px solid rgba(255,255,255,0.95);
+}
+.bio-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.speaker-right { padding: 38px 28px 26px; }
+.speaker-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.speaker-title {
+  margin: 0;
+  max-width: 640px;
+  font-size: clamp(3rem, 4.8vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+.speaker-text {
+  margin-top: 24px;
+  max-width: 650px;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+.topic-list { margin-top: 28px; }
+.topic-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.topic-main {
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+.topic-sub {
+  color: var(--muted);
+  text-align: right;
+}
+
+.footer {
+  padding: 26px 10px 10px;
+  color: #8b98aa;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.mail-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .section-header,
+  .speaker-grid,
+  .service-grid,
+  .hero-cards {
+    grid-template-columns: 1fr;
+  }
+  .hero { min-height: auto; }
+  .hero-image { min-height: 340px; }
+  .speaker-left {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 720px) {
+  .page { padding: 14px; }
+  .nav, .hero-copy, .section, .speaker-right, .speaker-left { padding-left: 20px; padding-right: 20px; }
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  h1 { font-size: 3.4rem; }
+  .section-title { font-size: 2.8rem; }
+}
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="shell">
+      <div class="panel nav">
+        <div class="brand">Richard Liehmann</div>
+        <div class="nav-links">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#speaker">Speaker</a>
+        </div>
+      </div>
+
+      <section class="panel hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Consulting · Beratung · Speaker</div>
+          <h1>Klarheit für Produkte, Technologie, Entscheidungen.</h1>
+          <p class="hero-text">
+            Ich begleite Unternehmen an der Schnittstelle von Strategie, Entwicklung und Umsetzung —
+            mit einem klaren Blick auf Produkt, Organisation und Wirkung.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#leistungen">Leistungen ansehen</a>
+            <a class="btn btn-secondary" href="#speaker">Speaking anfragen</a>
+          </div>
+
+          <div class="hero-cards">
+            <div class="mini-card">
+              <h3>Strategie</h3>
+              <p>Roadmaps, technologische Entscheidungen und klare Prioritäten.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Entwicklung</h3>
+              <p>Vom Konzept bis zum marktreifen Produkt — strukturiert und belastbar.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Orientierung</h3>
+              <p>Externe Perspektive für komplexe Fragen, Teams und Transformationen.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="solso/images/parallax/02.jpg" alt="Naturmotiv">
+        </div>
+      </section>
+
+      <section id="leistungen" class="panel section">
+        <div class="section-header">
+          <h2 class="section-title">Leistungen</h2>
+          <p class="section-intro">
+            Strategische Beratung, Management Consulting und fundierte Konzepte
+            für Unternehmen, die Produkte entwickeln, Entscheidungen absichern
+            und Komplexität reduzieren wollen.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-number">01</div>
+            <h3>Strategic Advice</h3>
+            <p>
+              Gemeinsam schärfen wir technologische Entscheidungen, Produktvisionen
+              und Prioritäten. Aus Historie, Markt und Zielbild entsteht eine belastbare Roadmap.
+            </p>
+            <ul>
+              <li>Roadmaps und Entscheidungsgrundlagen</li>
+              <li>Technologie- und Produktstrategie</li>
+              <li>Mechatronics, Software, KI</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">02</div>
+            <h3>Consulting &amp; Beratung</h3>
+            <p>
+              Externe Perspektive für interne Komplexität: von Prozessneuausrichtung
+              über Entwicklungsstrukturen bis zur konkreten Produktrealisierung.
+            </p>
+            <ul>
+              <li>Entwicklungs- und Produktionsprozesse</li>
+              <li>Vom Prototyp bis zur Umsetzung</li>
+              <li>Hard- und Software über den gesamten Zyklus</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">03</div>
+            <h3>Research &amp; Concepts</h3>
+            <p>
+              Studien, Machbarkeiten, Spezifikationen und Konzepte, die nicht nur
+              gut aussehen, sondern als echte Grundlage für Entscheidungen dienen.
+            </p>
+            <ul>
+              <li>Feasibility Studies und Konzeptarbeit</li>
+              <li>Research für neue Produktideen</li>
+              <li>Sensors, Mobile, Software, Mechatronics</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="speaker" class="panel speaker-grid section">
+        <div class="speaker-left">
+          <div class="bio-card">
+            <img src="solso/images/avatar.jpg" alt="Richard Liehmann">
+            <p>
+              Richard Liehmann verbindet Strategie, Produktentwicklung und unternehmerische Praxis —
+              klar, verständlich und mit Blick auf das Wesentliche.
+            </p>
+          </div>
+        </div>
+
+        <div class="speaker-right">
+          <div class="speaker-kicker">Speaker</div>
+          <h2 class="speaker-title">Impulse, die Komplexität verständlich machen.</h2>
+          <p class="speaker-text">
+            Für Keynotes, Panels, interne Formate und Executive-Sessions.
+            Immer dann, wenn Technologie, Produkt und Verantwortung nicht nur erklärt,
+            sondern auf den Punkt gebracht werden müssen.
+          </p>
+
+          <div class="topic-list">
+            <div class="topic-row">
+              <div class="topic-main">Produktstrategie &amp; Innovation</div>
+              <div class="topic-sub">von Idee bis Markt</div>
+            </div>
+            <div class="topic-row">
+              <div class="topic-main">Technologie &amp; Führung</div>
+              <div class="topic-sub">klare Entscheidungen in komplexen Umfeldern</div>
+            </div>
+            <div class="topic-row">
+              <div class="topic-main">Transformation &amp; Umsetzung</div>
+              <div class="topic-sub">zwischen Konzept, Team und Realität</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        Richard Liehmann · Berlin · Deutschland<br>
+        <a class="mail-btn" href="mailto:r.liehmann@icloud.com">Kontakt</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
