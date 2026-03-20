@@ -3,7 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Richard Liehmann</title>
+
+<title>Richard Liehmann – Consulting, Beratung & Speaker</title>
+<meta name="description" content="Richard Liehmann begleitet Unternehmen an der Schnittstelle von Strategie, Entwicklung und Umsetzung – mit Fokus auf Produkt, Technologie und Wirkung.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Richard Liehmann">
+<meta name="theme-color" content="#111111">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Richard Liehmann – Consulting, Beratung & Speaker">
+<meta property="og:description" content="Strategische Beratung, Management Consulting und Speaking zu Produkt, Technologie und Entscheidungen.">
+<meta property="og:image" content="02.jpg">
+<meta property="og:locale" content="de_DE">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Richard Liehmann – Consulting, Beratung & Speaker">
+<meta name="twitter:description" content="Strategische Beratung, Management Consulting und Speaking zu Produkt, Technologie und Entscheidungen.">
+<meta name="twitter:image" content="02.jpg">
+
+<link rel="canonical" href="https://solso.com/">
+<link rel="alternate" hreflang="de" href="https://solso.com/">
+<link rel="alternate" hreflang="en" href="https://solso.com/">
+<link rel="alternate" hreflang="x-default" href="https://solso.com/">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Richard Liehmann",
+  "url":"https://solso.com/",
+  "email":"mailto:r.liehmann@icloud.com",
+  "jobTitle":"Consultant, Advisor, Speaker",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Berlin",
+    "addressCountry":"DE"
+  }
+}
+</script>
+
 <style>
 :root {
   --bg: #eef3f8;
@@ -48,11 +86,38 @@ a { color: inherit; text-decoration: none; }
   font-size: 1.05rem;
   font-weight: 600;
 }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
 .nav-links {
   display: flex;
   gap: 28px;
   color: var(--muted);
   font-size: 0.98rem;
+}
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  user-select: none;
+}
+.lang-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.lang-btn.active {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .hero {
@@ -339,6 +404,10 @@ h1 {
     gap: 10px;
     align-items: flex-start;
   }
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+  }
   h1 { font-size: 3.4rem; }
   .section-title { font-size: 2.8rem; }
 }
@@ -349,37 +418,44 @@ h1 {
     <div class="shell">
       <div class="panel nav">
         <div class="brand">Richard Liehmann</div>
-        <div class="nav-links">
-          <a href="#leistungen">Leistungen</a>
-          <a href="#speaker">Speaker</a>
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="#leistungen" id="nav-services">Leistungen</a>
+            <a href="#speaker" id="nav-speaker">Speaker</a>
+          </div>
+          <div class="lang-switch" aria-label="Language switch">
+            <button class="lang-btn" id="lang-de" type="button">DE</button>
+            <span>/</span>
+            <button class="lang-btn" id="lang-en" type="button">EN</button>
+          </div>
         </div>
       </div>
 
       <section class="panel hero">
         <div class="hero-copy">
-          <div class="eyebrow">Consulting · Beratung · Speaker</div>
-          <h1>Klarheit für Produkte, Technologien, Entscheidungen.</h1>
-          <p class="hero-text">
+          <div class="eyebrow" id="eyebrow">Consulting · Beratung · Speaker</div>
+          <h1 id="headline">Klarheit für Produkte, Technologien, Entscheidungen.</h1>
+          <p class="hero-text" id="hero-text">
             Ich begleite Unternehmen an der Schnittstelle von Strategie, Entwicklung und Umsetzung —
             mit einem klaren Blick auf Produkt, Organisation und Wirkung.
           </p>
           <div class="button-row">
-            <a class="btn btn-primary" href="#leistungen">Leistungen ansehen</a>
-            <a class="btn btn-secondary" href="#speaker">Speaking anfragen</a>
+            <a class="btn btn-primary" href="#leistungen" id="btn-services">Leistungen ansehen</a>
+            <a class="btn btn-secondary" href="#speaker" id="btn-speaker">Speaking anfragen</a>
           </div>
 
           <div class="hero-cards">
             <div class="mini-card">
-              <h3>Strategie</h3>
-              <p>Roadmaps, technologische Entscheidungen und klare Prioritäten.</p>
+              <h3 id="mini-1-title">Strategie</h3>
+              <p id="mini-1-text">Roadmaps, technologische Entscheidungen und klare Prioritäten.</p>
             </div>
             <div class="mini-card">
-              <h3>Entwicklung</h3>
-              <p>Vom Konzept bis zum marktreifen Produkt — strukturiert und belastbar.</p>
+              <h3 id="mini-2-title">Entwicklung</h3>
+              <p id="mini-2-text">Vom Konzept bis zum marktreifen Produkt — strukturiert und belastbar.</p>
             </div>
             <div class="mini-card">
-              <h3>Orientierung</h3>
-              <p>Externe Perspektive für komplexe Fragen, Teams und Transformationen.</p>
+              <h3 id="mini-3-title">Orientierung</h3>
+              <p id="mini-3-text">Externe Perspektive für komplexe Fragen, Teams und Transformationen.</p>
             </div>
           </div>
         </div>
@@ -390,8 +466,8 @@ h1 {
 
       <section id="leistungen" class="panel section">
         <div class="section-header">
-          <h2 class="section-title">Leistungen</h2>
-          <p class="section-intro">
+          <h2 class="section-title" id="services-title">Leistungen</h2>
+          <p class="section-intro" id="services-intro">
             Strategische Beratung, Management Consulting und fundierte Konzepte
             für Unternehmen, die Produkte entwickeln, Entscheidungen absichern
             und Komplexität reduzieren wollen.
@@ -401,43 +477,43 @@ h1 {
         <div class="service-grid">
           <article class="service-card">
             <div class="service-number">01</div>
-            <h3>Strategic Advice</h3>
-            <p>
+            <h3 id="service-1-title">Strategic Advice</h3>
+            <p id="service-1-text">
               Gemeinsam schärfen wir technologische Entscheidungen, Produktvisionen
               und Prioritäten. Aus Historie, Markt und Zielbild entsteht eine belastbare Roadmap.
             </p>
             <ul>
-              <li>Roadmaps und Entscheidungsgrundlagen</li>
-              <li>Technologie- und Produktstrategie</li>
-              <li>Mechatronics, Software, KI</li>
+              <li id="service-1-li-1">Roadmaps und Entscheidungsgrundlagen</li>
+              <li id="service-1-li-2">Technologie- und Produktstrategie</li>
+              <li id="service-1-li-3">Mechatronics, Software, KI</li>
             </ul>
           </article>
 
           <article class="service-card">
             <div class="service-number">02</div>
-            <h3>Consulting &amp; Beratung</h3>
-            <p>
+            <h3 id="service-2-title">Consulting &amp; Beratung</h3>
+            <p id="service-2-text">
               Externe Perspektive für interne Komplexität: von Prozessneuausrichtung
               über Entwicklungsstrukturen bis zur konkreten Produktrealisierung.
             </p>
             <ul>
-              <li>Entwicklungs- und Produktionsprozesse</li>
-              <li>Vom Prototyp bis zur Umsetzung</li>
-              <li>Hard- und Software über den gesamten Zyklus</li>
+              <li id="service-2-li-1">Entwicklungs- und Produktionsprozesse</li>
+              <li id="service-2-li-2">Vom Prototyp bis zur Umsetzung</li>
+              <li id="service-2-li-3">Hard- und Software über den gesamten Zyklus</li>
             </ul>
           </article>
 
           <article class="service-card">
             <div class="service-number">03</div>
-            <h3>Research &amp; Concepts</h3>
-            <p>
+            <h3 id="service-3-title">Research &amp; Concepts</h3>
+            <p id="service-3-text">
               Studien, Machbarkeiten, Spezifikationen und Konzepte, die nicht nur
               gut aussehen, sondern als echte Grundlage für Entscheidungen dienen.
             </p>
             <ul>
-              <li>Feasibility Studies und Konzeptarbeit</li>
-              <li>Research für neue Produktideen</li>
-              <li>Sensors, Mobile, Software, Mechatronics</li>
+              <li id="service-3-li-1">Feasibility Studies und Konzeptarbeit</li>
+              <li id="service-3-li-2">Research für neue Produktideen</li>
+              <li id="service-3-li-3">Sensors, Mobile, Software, Mechatronics</li>
             </ul>
           </article>
         </div>
@@ -447,7 +523,7 @@ h1 {
         <div class="speaker-left">
           <div class="bio-card">
             <img src="LIRI_headshot_01.png" alt="Richard Liehmann">
-            <p>
+            <p id="bio-text">
               Richard Liehmann verbindet Strategie, Produktentwicklung und unternehmerische Praxis —
               klar, verständlich und mit Blick auf das Wesentliche.
             </p>
@@ -455,9 +531,9 @@ h1 {
         </div>
 
         <div class="speaker-right">
-          <div class="speaker-kicker">Speaker</div>
-          <h2 class="speaker-title">Impulse, die Komplexität verständlich machen.</h2>
-          <p class="speaker-text">
+          <div class="speaker-kicker" id="speaker-kicker">Speaker</div>
+          <h2 class="speaker-title" id="speaker-title">Impulse, die Komplexität verständlich machen.</h2>
+          <p class="speaker-text" id="speaker-text">
             Für Keynotes, Panels, interne Formate und Executive-Sessions.
             Immer dann, wenn Technologie, Produkt und Verantwortung nicht nur erklärt,
             sondern auf den Punkt gebracht werden müssen.
@@ -465,26 +541,254 @@ h1 {
 
           <div class="topic-list">
             <div class="topic-row">
-              <div class="topic-main">Produktstrategie &amp; Innovation</div>
-              <div class="topic-sub">von Idee bis Markt</div>
+              <div class="topic-main" id="topic-1-main">Produktstrategie &amp; Innovation</div>
+              <div class="topic-sub" id="topic-1-sub">von Idee bis Markt</div>
             </div>
             <div class="topic-row">
-              <div class="topic-main">Technologie &amp; Führung</div>
-              <div class="topic-sub">klare Entscheidungen in komplexen Umfeldern</div>
+              <div class="topic-main" id="topic-2-main">Technologie &amp; Führung</div>
+              <div class="topic-sub" id="topic-2-sub">klare Entscheidungen in komplexen Umfeldern</div>
             </div>
             <div class="topic-row">
-              <div class="topic-main">Transformation &amp; Umsetzung</div>
-              <div class="topic-sub">zwischen Konzept, Team und Realität</div>
+              <div class="topic-main" id="topic-3-main">Transformation &amp; Umsetzung</div>
+              <div class="topic-sub" id="topic-3-sub">zwischen Konzept, Team und Realität</div>
             </div>
           </div>
         </div>
       </section>
 
       <div class="footer">
-        Richard Liehmann · Berlin · Deutschland<br>
-        <a class="mail-btn" href="mailto:r.liehmann@icloud.com">Kontakt</a>
+        <span id="footer-location">Richard Liehmann · Berlin · Deutschland</span><br>
+        <a class="mail-btn" href="mailto:r.liehmann@icloud.com" id="contact-btn">Kontakt</a>
       </div>
     </div>
   </div>
+
+<script>
+const translations = {
+  de: {
+    htmlLang: "de",
+    title: "Richard Liehmann – Consulting, Beratung & Speaker",
+    description: "Richard Liehmann begleitet Unternehmen an der Schnittstelle von Strategie, Entwicklung und Umsetzung – mit Fokus auf Produkt, Technologie und Wirkung.",
+    ogTitle: "Richard Liehmann – Consulting, Beratung & Speaker",
+    ogDescription: "Strategische Beratung, Management Consulting und Speaking zu Produkt, Technologie und Entscheidungen.",
+    twitterTitle: "Richard Liehmann – Consulting, Beratung & Speaker",
+    twitterDescription: "Strategische Beratung, Management Consulting und Speaking zu Produkt, Technologie und Entscheidungen.",
+    ogLocale: "de_DE",
+
+    navServices: "Leistungen",
+    navSpeaker: "Speaker",
+    eyebrow: "Consulting · Beratung · Speaker",
+    headline: "Klarheit für Produkte, Technologien, Entscheidungen.",
+    heroText: "Ich begleite Unternehmen an der Schnittstelle von Strategie, Entwicklung und Umsetzung — mit einem klaren Blick auf Produkt, Organisation und Wirkung.",
+    btnServices: "Leistungen ansehen",
+    btnSpeaker: "Speaking anfragen",
+
+    mini1Title: "Strategie",
+    mini1Text: "Roadmaps, technologische Entscheidungen und klare Prioritäten.",
+    mini2Title: "Entwicklung",
+    mini2Text: "Vom Konzept bis zum marktreifen Produkt — strukturiert und belastbar.",
+    mini3Title: "Orientierung",
+    mini3Text: "Externe Perspektive für komplexe Fragen, Teams und Transformationen.",
+
+    servicesTitle: "Leistungen",
+    servicesIntro: "Strategische Beratung, Management Consulting und fundierte Konzepte für Unternehmen, die Produkte entwickeln, Entscheidungen absichern und Komplexität reduzieren wollen.",
+
+    service1Title: "Strategic Advice",
+    service1Text: "Gemeinsam schärfen wir technologische Entscheidungen, Produktvisionen und Prioritäten. Aus Historie, Markt und Zielbild entsteht eine belastbare Roadmap.",
+    service1Li1: "Roadmaps und Entscheidungsgrundlagen",
+    service1Li2: "Technologie- und Produktstrategie",
+    service1Li3: "Mechatronics, Software, KI",
+
+    service2Title: "Consulting & Beratung",
+    service2Text: "Externe Perspektive für interne Komplexität: von Prozessneuausrichtung über Entwicklungsstrukturen bis zur konkreten Produktrealisierung.",
+    service2Li1: "Entwicklungs- und Produktionsprozesse",
+    service2Li2: "Vom Prototyp bis zur Umsetzung",
+    service2Li3: "Hard- und Software über den gesamten Zyklus",
+
+    service3Title: "Research & Concepts",
+    service3Text: "Studien, Machbarkeiten, Spezifikationen und Konzepte, die nicht nur gut aussehen, sondern als echte Grundlage für Entscheidungen dienen.",
+    service3Li1: "Feasibility Studies und Konzeptarbeit",
+    service3Li2: "Research für neue Produktideen",
+    service3Li3: "Sensors, Mobile, Software, Mechatronics",
+
+    bioText: "Richard Liehmann verbindet Strategie, Produktentwicklung und unternehmerische Praxis — klar, verständlich und mit Blick auf das Wesentliche.",
+    speakerKicker: "Speaker",
+    speakerTitle: "Impulse, die Komplexität verständlich machen.",
+    speakerText: "Für Keynotes, Panels, interne Formate und Executive-Sessions. Immer dann, wenn Technologie, Produkt und Verantwortung nicht nur erklärt, sondern auf den Punkt gebracht werden müssen.",
+
+    topic1Main: "Produktstrategie & Innovation",
+    topic1Sub: "von Idee bis Markt",
+    topic2Main: "Technologie & Führung",
+    topic2Sub: "klare Entscheidungen in komplexen Umfeldern",
+    topic3Main: "Transformation & Umsetzung",
+    topic3Sub: "zwischen Konzept, Team und Realität",
+
+    footerLocation: "Richard Liehmann · Berlin · Deutschland",
+    contact: "Kontakt"
+  },
+
+  en: {
+    htmlLang: "en",
+    title: "Richard Liehmann – Consulting, Advisory & Speaker",
+    description: "Richard Liehmann supports companies at the intersection of strategy, development and execution — with a focus on product, technology and impact.",
+    ogTitle: "Richard Liehmann – Consulting, Advisory & Speaker",
+    ogDescription: "Strategic advisory, management consulting and speaking on product, technology and decision-making.",
+    twitterTitle: "Richard Liehmann – Consulting, Advisory & Speaker",
+    twitterDescription: "Strategic advisory, management consulting and speaking on product, technology and decision-making.",
+    ogLocale: "en_US",
+
+    navServices: "Services",
+    navSpeaker: "Speaker",
+    eyebrow: "Consulting · Advisory · Speaker",
+    headline: "Clarity for products, technology and decisions.",
+    heroText: "I support companies at the intersection of strategy, development and execution — with a clear focus on product, organization and impact.",
+    btnServices: "View services",
+    btnSpeaker: "Request speaking",
+
+    mini1Title: "Strategy",
+    mini1Text: "Roadmaps, technology decisions and clear priorities.",
+    mini2Title: "Development",
+    mini2Text: "From concept to market-ready product — structured and robust.",
+    mini3Title: "Orientation",
+    mini3Text: "External perspective for complex questions, teams and transformations.",
+
+    servicesTitle: "Services",
+    servicesIntro: "Strategic advisory, management consulting and solid concepts for companies building products, securing decisions and reducing complexity.",
+
+    service1Title: "Strategic Advice",
+    service1Text: "Together we sharpen technology decisions, product visions and priorities. History, market context and target vision become a robust roadmap.",
+    service1Li1: "Roadmaps and decision frameworks",
+    service1Li2: "Technology and product strategy",
+    service1Li3: "Mechatronics, software, AI",
+
+    service2Title: "Consulting & Advisory",
+    service2Text: "An external perspective for internal complexity: from process redesign and development structures to concrete product realization.",
+    service2Li1: "Development and production processes",
+    service2Li2: "From prototype to implementation",
+    service2Li3: "Hardware and software across the full lifecycle",
+
+    service3Title: "Research & Concepts",
+    service3Text: "Studies, feasibility work, specifications and concepts that do not just look good, but provide a real foundation for decisions.",
+    service3Li1: "Feasibility studies and concept work",
+    service3Li2: "Research for new product ideas",
+    service3Li3: "Sensors, mobile, software, mechatronics",
+
+    bioText: "Richard Liehmann combines strategy, product development and entrepreneurial practice — clear, concise and focused on what matters.",
+    speakerKicker: "Speaker",
+    speakerTitle: "Insights that make complexity understandable.",
+    speakerText: "For keynotes, panels, internal formats and executive sessions. Whenever technology, product and responsibility need to be explained clearly and brought to the point.",
+
+    topic1Main: "Product Strategy & Innovation",
+    topic1Sub: "from idea to market",
+    topic2Main: "Technology & Leadership",
+    topic2Sub: "clear decisions in complex environments",
+    topic3Main: "Transformation & Execution",
+    topic3Sub: "between concept, team and reality",
+
+    footerLocation: "Richard Liehmann · Berlin · Germany",
+    contact: "Contact"
+  }
+};
+
+function updateMeta(name, content) {
+  const el = document.querySelector(`meta[name="${name}"]`);
+  if (el) el.setAttribute("content", content);
+}
+
+function updateProperty(property, content) {
+  const el = document.querySelector(`meta[property="${property}"]`);
+  if (el) el.setAttribute("content", content);
+}
+
+function setActiveLang(lang) {
+  document.getElementById("lang-de").classList.toggle("active", lang === "de");
+  document.getElementById("lang-en").classList.toggle("active", lang === "en");
+}
+
+function applyLanguage(lang) {
+  const t = translations[lang] || translations.en;
+
+  document.documentElement.lang = t.htmlLang;
+
+  document.title = t.title;
+  updateMeta("description", t.description);
+  updateProperty("og:title", t.ogTitle);
+  updateProperty("og:description", t.ogDescription);
+  updateProperty("og:locale", t.ogLocale);
+  updateMeta("twitter:title", t.twitterTitle);
+  updateMeta("twitter:description", t.twitterDescription);
+
+  document.getElementById("nav-services").textContent = t.navServices;
+  document.getElementById("nav-speaker").textContent = t.navSpeaker;
+  document.getElementById("eyebrow").textContent = t.eyebrow;
+  document.getElementById("headline").textContent = t.headline;
+  document.getElementById("hero-text").textContent = t.heroText;
+  document.getElementById("btn-services").textContent = t.btnServices;
+  document.getElementById("btn-speaker").textContent = t.btnSpeaker;
+
+  document.getElementById("mini-1-title").textContent = t.mini1Title;
+  document.getElementById("mini-1-text").textContent = t.mini1Text;
+  document.getElementById("mini-2-title").textContent = t.mini2Title;
+  document.getElementById("mini-2-text").textContent = t.mini2Text;
+  document.getElementById("mini-3-title").textContent = t.mini3Title;
+  document.getElementById("mini-3-text").textContent = t.mini3Text;
+
+  document.getElementById("services-title").textContent = t.servicesTitle;
+  document.getElementById("services-intro").textContent = t.servicesIntro;
+
+  document.getElementById("service-1-title").textContent = t.service1Title;
+  document.getElementById("service-1-text").textContent = t.service1Text;
+  document.getElementById("service-1-li-1").textContent = t.service1Li1;
+  document.getElementById("service-1-li-2").textContent = t.service1Li2;
+  document.getElementById("service-1-li-3").textContent = t.service1Li3;
+
+  document.getElementById("service-2-title").textContent = t.service2Title;
+  document.getElementById("service-2-text").textContent = t.service2Text;
+  document.getElementById("service-2-li-1").textContent = t.service2Li1;
+  document.getElementById("service-2-li-2").textContent = t.service2Li2;
+  document.getElementById("service-2-li-3").textContent = t.service2Li3;
+
+  document.getElementById("service-3-title").textContent = t.service3Title;
+  document.getElementById("service-3-text").textContent = t.service3Text;
+  document.getElementById("service-3-li-1").textContent = t.service3Li1;
+  document.getElementById("service-3-li-2").textContent = t.service3Li2;
+  document.getElementById("service-3-li-3").textContent = t.service3Li3;
+
+  document.getElementById("bio-text").textContent = t.bioText;
+  document.getElementById("speaker-kicker").textContent = t.speakerKicker;
+  document.getElementById("speaker-title").textContent = t.speakerTitle;
+  document.getElementById("speaker-text").textContent = t.speakerText;
+
+  document.getElementById("topic-1-main").textContent = t.topic1Main;
+  document.getElementById("topic-1-sub").textContent = t.topic1Sub;
+  document.getElementById("topic-2-main").textContent = t.topic2Main;
+  document.getElementById("topic-2-sub").textContent = t.topic2Sub;
+  document.getElementById("topic-3-main").textContent = t.topic3Main;
+  document.getElementById("topic-3-sub").textContent = t.topic3Sub;
+
+  document.getElementById("footer-location").textContent = t.footerLocation;
+  document.getElementById("contact-btn").textContent = t.contact;
+
+  setActiveLang(lang);
+}
+
+function chooseInitialLanguage() {
+  const saved = localStorage.getItem("site-language");
+  if (saved === "de" || saved === "en") return saved;
+
+  const browserLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+  return browserLang.startsWith("de") ? "de" : "en";
+}
+
+function setLanguage(lang) {
+  localStorage.setItem("site-language", lang);
+  applyLanguage(lang);
+}
+
+document.getElementById("lang-de").addEventListener("click", () => setLanguage("de"));
+document.getElementById("lang-en").addEventListener("click", () => setLanguage("en"));
+
+applyLanguage(chooseInitialLanguage());
+</script>
 </body>
 </html>
