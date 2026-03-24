@@ -442,7 +442,8 @@ h1 {
           <div class="nav-links">
             <a href="#leistungen" id="nav-services">Leistungen</a>
             <a href="#speaker" id="nav-speaker">Speaker</a>
-          </div>
+            <a href="#contact" id="nav-contact">Kontakt</a>
+           </div>
           <div class="lang-switch" aria-label="Language switch">
             <button class="lang-btn" id="lang-de" type="button">DE</button>
             <span>/</span>
@@ -578,7 +579,9 @@ h1 {
 
       <div class="footer">
         <span id="footer-location">Richard Liehmann · Berlin · Deutschland</span><br>
+        <section id="contact">
         <a class="mail-btn" href="mailto:r.liehmann@icloud.com" id="contact-btn">Kontakt</a>
+        </section>
       </div>
     </div>
   </div>
@@ -597,6 +600,7 @@ const translations = {
 
     navServices: "Leistungen",
     navSpeaker: "Speaker",
+    navContact: "Kontakt",
     eyebrow: "Consulting · Beratung · Speaker",
     headline: "Klarheit für<br>Produkte,<br>Technologien,<br>Entscheidungen.",
     heroText: "Ich begleite Unternehmen an der Schnittstelle von Strategie, Entwicklung und Umsetzung — mit einem klaren Blick auf Produkt, Organisation und Wirkung.",
@@ -659,6 +663,7 @@ const translations = {
 
     navServices: "Services",
     navSpeaker: "Speaker",
+    navContact: "Contact",
     eyebrow: "Consulting · Advisory · Speaker",
     headline: "Clarity for<br>products,<br>technology<br>and decisions.",
     heroText: "I support companies at the intersection of strategy, development and execution — with a clear focus on product, organization and impact.",
@@ -740,6 +745,7 @@ function applyLanguage(lang) {
 
   document.getElementById("nav-services").textContent = t.navServices;
   document.getElementById("nav-speaker").textContent = t.navSpeaker;
+  document.getElementById("nav-contact").textContent = t.navContact;
   document.getElementById("eyebrow").textContent = t.eyebrow;
   document.getElementById("headline").innerHTML = t.headline;
   document.getElementById("hero-text").textContent = t.heroText;
