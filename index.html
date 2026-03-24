@@ -598,7 +598,7 @@ const translations = {
     navServices: "Leistungen",
     navSpeaker: "Speaker",
     eyebrow: "Consulting · Beratung · Speaker",
-    headline: "Klarheit für <br>Produkte,<br>Technologien,<br>Entscheidungen.",
+    headline: "Klarheit für<br>Produkte,<br>Technologien,<br>Entscheidungen.",
     heroText: "Ich begleite Unternehmen an der Schnittstelle von Strategie, Entwicklung und Umsetzung — mit einem klaren Blick auf Produkt, Organisation und Wirkung.",
     btnServices: "Leistungen ansehen",
     btnSpeaker: "Speaking anfragen",
@@ -660,7 +660,7 @@ const translations = {
     navServices: "Services",
     navSpeaker: "Speaker",
     eyebrow: "Consulting · Advisory · Speaker",
-    headline: "Clarity for products, technology and decisions.",
+    headline: "Clarity for<br>products,<br>technology<br>and decisions.",
     heroText: "I support companies at the intersection of strategy, development and execution — with a clear focus on product, organization and impact.",
     btnServices: "View services",
     btnSpeaker: "Request speaking",
@@ -741,7 +741,7 @@ function applyLanguage(lang) {
   document.getElementById("nav-services").textContent = t.navServices;
   document.getElementById("nav-speaker").textContent = t.navSpeaker;
   document.getElementById("eyebrow").textContent = t.eyebrow;
-  document.getElementById("headline").textContent = t.headline;
+  document.getElementById("headline").innerHTML = t.headline;
   document.getElementById("hero-text").textContent = t.heroText;
   document.getElementById("btn-services").textContent = t.btnServices;
   document.getElementById("btn-speaker").textContent = t.btnSpeaker;
