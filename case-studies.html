@@ -4,226 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Richard Liehmann – Case Studies</title>
-<meta name="description" content="Ausgewählte Case Studies von Richard Liehmann aus SaaS, Smart Home, Cloud-Plattformen und AI & Digital Transformation.">
+<meta name="description" content="Ausgewählte Case Studies von Richard Liehmann aus SaaS, Smart Home, Cloud-Plattformen und Consulting.">
 <style>
-:root {
-  --bg: #eef3f8;
-  --panel: #f8fbff;
-  --panel-strong: #ffffff;
-  --text: #0f172a;
-  --muted: #5b6778;
-  --line: #d7e3f4;
-  --accent: #FF13F0;
-  --accent-soft: #f2f2f2;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-html, body { max-width: 100%; overflow-x: hidden; }
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: linear-gradient(180deg, #edf2f7 0%, #f4f7fb 100%);
-  color: var(--text);
-}
-a { color: inherit; text-decoration: none; }
-.page { padding: 22px; }
-.shell { max-width: 1180px; margin: 0 auto; }
-.panel {
-  background: rgba(255,255,255,0.62);
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-}
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 28px;
-  margin-bottom: 18px;
-}
-.brand { font-size: 1.05rem; font-weight: 600; }
-.nav-right { display: flex; align-items: center; gap: 22px; }
-.nav-links { display: flex; gap: 28px; color: var(--muted); font-size: 0.98rem; }
-.nav-links a.active { color: var(--accent); font-weight: 700; }
-.lang-switch { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 0.9rem; }
-.lang-btn { appearance: none; border: 0; background: transparent; padding: 0; font: inherit; color: inherit; cursor: pointer; }
-.lang-btn.active { color: var(--accent); font-weight: 700; }
-.hero { padding: 54px 36px 38px; }
-.eyebrow { text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted); font-size: 0.9rem; margin-bottom: 18px; }
-h1 {
-  margin: 0;
-  font-size: clamp(2.6rem, 8vw, 6.2rem);
-  line-height: 0.95;
-  letter-spacing: -0.05em;
-  max-width: 900px;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  hyphens: auto;
-}
-.hero-text { margin-top: 28px; max-width: 720px; font-size: 1.06rem; line-height: 1.6; color: var(--muted); }
-.case-section { margin-top: 26px; padding: 28px; }
-.section-header { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; margin-bottom: 22px; }
-.section-title { margin: 0; font-size: clamp(2.8rem, 5vw, 4.4rem); line-height: 0.98; letter-spacing: -0.05em; }
-.section-intro { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.55; max-width: 520px; }
-.case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.case-card {
-  background: rgba(255,255,255,0.72);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 26px;
-}
-.case-number {
-  width: 42px; height: 42px; border-radius: 50%; display: inline-flex;
-  align-items: center; justify-content: center; background: var(--accent-soft);
-  color: var(--accent); font-weight: 700; margin-bottom: 18px;
-}
-.case-meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 10px; }
-.case-card h3 { margin: 0 0 12px; font-size: 1.5rem; letter-spacing: -0.02em; }
-.case-role { color: var(--accent); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 16px; }
-.case-card p { margin: 0 0 18px; color: var(--muted); line-height: 1.55; }
-.case-label { margin: 20px 0 8px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 700; }
-.case-card ul { margin: 0; padding-left: 18px; color: #243244; }
-.case-card li { padding: 5px 0; line-height: 1.4; }
-.case-tech { border-top: 1px solid var(--line); margin-top: 20px; padding-top: 16px; color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
-.back { display: inline-flex; margin-top: 22px; color: var(--muted); font-size: 0.95rem; }
-.footer { padding: 26px 10px 10px; color: #8b98aa; font-size: 0.9rem; text-align: center; }
-.mail-btn { display: inline-flex; align-items: center; justify-content: center; margin-top: 14px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 600; font-size: 0.95rem; }
-@media (max-width: 980px) {
-  .section-header, .case-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 720px) {
-  .page { padding: 14px; }
-  .nav, .hero, .case-section { padding-left: 20px; padding-right: 20px; }
-  .nav { flex-direction: column; gap: 10px; align-items: flex-start; }
-  .nav-right { width: 100%; justify-content: space-between; }
-  .nav-links { gap: 16px; flex-wrap: wrap; }
-  h1 { font-size: 2.8rem; line-height: 0.98; }
-}
+:root{--bg:#eef3f8;--panel:#f8fbff;--panel-strong:#fff;--text:#0f172a;--muted:#5b6778;--line:#d7e3f4;--accent:#FF13F0;--accent-soft:#f2f2f2;--shadow:0 10px 30px rgba(0,0,0,.05)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}html,body{max-width:100%;overflow-x:hidden}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#edf2f7 0%,#f4f7fb 100%);color:var(--text)}a{color:inherit;text-decoration:none}.page{padding:22px}.shell{max-width:1180px;margin:0 auto}.panel{background:rgba(255,255,255,.62);border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);backdrop-filter:blur(10px)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;margin-bottom:18px}.brand{font-size:1.05rem;font-weight:600}.nav-right{display:flex;align-items:center;gap:22px}.nav-links{display:flex;gap:28px;color:var(--muted);font-size:.98rem}.nav-links a.active{color:var(--accent);font-weight:700}.lang-switch{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.9rem}.lang-btn{appearance:none;border:0;background:transparent;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer}.lang-btn.active{color:var(--accent);font-weight:700}
+.hero{padding:54px 36px 38px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;color:var(--muted);font-size:.9rem;margin-bottom:18px}h1{margin:0;font-size:clamp(2.6rem,8vw,7.1rem);line-height:.95;letter-spacing:-.05em;max-width:820px;overflow-wrap:anywhere;word-break:break-word;hyphens:auto}.hero-text{margin-top:28px;max-width:670px;font-size:1.06rem;line-height:1.6;color:var(--muted)}
+.section{margin-top:26px;padding:28px}.section-header{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;margin-bottom:22px}.section-title{margin:0;font-size:clamp(2.8rem,5vw,4.4rem);line-height:.98;letter-spacing:-.05em}.section-intro{margin:0;color:var(--muted);font-size:1rem;line-height:1.55;max-width:520px}
+.case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.case-card{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:24px;padding:22px}.case-head{display:flex;align-items:center;gap:16px;margin-bottom:20px}.case-logo{width:72px;height:52px;object-fit:contain;object-position:left center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px}.case-logo.wordmark{font-weight:700;font-size:1rem;display:flex;align-items:center;justify-content:center;color:var(--text)}.case-meta{color:var(--muted);font-size:.9rem;margin-bottom:5px}.case-card h3{margin:0 0 3px;font-size:1.5rem;letter-spacing:-.02em}.case-role{color:var(--accent);font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700}.case-card p{margin:0 0 18px;color:var(--muted);line-height:1.55}.case-label{margin:20px 0 8px;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:700}.case-card ul{margin:0;padding-left:18px;color:#243244}.case-card li{padding:5px 0;line-height:1.4}.case-tech{border-top:1px solid var(--line);margin-top:20px;padding-top:16px;color:var(--muted);font-size:.9rem;line-height:1.5}
+.logo-section{margin-top:26px;padding:28px}.logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.logo-item{min-height:88px;background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:20px;display:flex;align-items:center;justify-content:center;padding:18px}.logo-item img{max-width:100%;max-height:42px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:.82}.logo-item span{font-weight:700;letter-spacing:-.02em;color:#334155;text-align:center}.logo-note{margin-top:14px;color:var(--muted);font-size:.9rem;line-height:1.5}.back{display:inline-flex;margin-top:22px;color:var(--muted);font-size:.95rem}.footer{padding:26px 10px 10px;color:#8b98aa;font-size:.9rem;text-align:center}.mail-btn{display:inline-flex;align-items:center;justify-content:center;margin-top:14px;min-height:44px;padding:0 18px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;font-size:.95rem}
+@media(max-width:980px){.section-header,.case-grid,.logo-grid{grid-template-columns:1fr 1fr}}@media(max-width:720px){.page{padding:14px}.nav,.hero,.section,.logo-section{padding-left:20px;padding-right:20px}.nav{flex-direction:column;gap:10px;align-items:flex-start}.nav-right{width:100%;justify-content:space-between}.nav-links{gap:16px;flex-wrap:wrap}h1{font-size:2.8rem;line-height:.98}.section-header,.case-grid,.logo-grid{grid-template-columns:1fr}.case-head{align-items:flex-start}}
 </style>
 </head>
 <body>
-<div class="page">
-<div class="shell">
+<div class="page"><div class="shell">
   <div class="panel nav">
     <div class="brand">Ing. Richard Liehmann</div>
-    <div class="nav-right">
-      <div class="nav-links">
-        <a href="index.html">About</a>
-        <a href="index.html#leistungen">Experience</a>
-        <a href="index.html#leistungen">Competencies</a>
-        <a href="index.html#referenzen">Highlights</a>
-        <a href="case-studies.html" class="active">Case Studies</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-      <div class="lang-switch"><button class="lang-btn active" id="de">DE</button><span>/</span><button class="lang-btn" id="en">EN</button></div>
-    </div>
+    <div class="nav-right"><div class="nav-links">
+      <a href="index.html">About</a><a href="index.html#leistungen">Experience</a><a href="index.html#leistungen">Competencies</a><a href="index.html#referenzen">Highlights</a><a href="case-studies.html" class="active">Case Studies</a><a href="index.html#contact">Contact</a>
+    </div><div class="lang-switch"><button class="lang-btn active" id="de">DE</button><span>/</span><button class="lang-btn" id="en">EN</button></div></div>
   </div>
 
   <section class="panel hero">
-    <div class="eyebrow" data-de="Case Studies" data-en="Case Studies">Case Studies</div>
+    <div class="eyebrow">Case Studies</div>
     <h1 data-de="Produkte bauen. Organisationen skalieren. Wirkung schaffen." data-en="Building products. Scaling organizations. Creating impact.">Produkte bauen. Organisationen skalieren. Wirkung schaffen.</h1>
-    <p class="hero-text" data-de="Ausgewählte Stationen aus mehr als 20 Jahren Erfahrung in Startups, Scale-ups und internationalen Unternehmen – von AI-native SaaS über Smart Home und Cloud-Plattformen bis zu AI & Digital Transformation." data-en="Selected work from more than 20 years of experience across startups, scale-ups and international companies – from AI-native SaaS and smart home to cloud platforms and AI & digital transformation.">Ausgewählte Stationen aus mehr als 20 Jahren Erfahrung in Startups, Scale-ups und internationalen Unternehmen – von AI-native SaaS über Smart Home und Cloud-Plattformen bis zu AI & Digital Transformation.</p>
+    <p class="hero-text" data-de="Ausgewählte Stationen aus mehr als 20 Jahren Erfahrung in Startups, Scale-ups und internationalen Unternehmen – von AI-native SaaS über Smart Home und Cloud-Plattformen bis zu Consulting und Digital Transformation." data-en="Selected work from more than 20 years of experience across startups, scale-ups and international companies – from AI-native SaaS and smart home to cloud platforms, consulting and digital transformation.">Ausgewählte Stationen aus mehr als 20 Jahren Erfahrung in Startups, Scale-ups und internationalen Unternehmen – von AI-native SaaS über Smart Home und Cloud-Plattformen bis zu Consulting und Digital Transformation.</p>
   </section>
 
-  <section class="panel case-section">
-    <div class="section-header">
-      <h2 class="section-title" data-de="Ausgewählte Cases" data-en="Selected Cases">Ausgewählte Cases</h2>
-      <p class="section-intro" data-de="Die Inhalte basieren auf den beschriebenen Rollen, Verantwortlichkeiten und ausgewählten Erfolgen aus meinem aktuellen Executive-Profil." data-en="The content is based on the roles, responsibilities and selected achievements described in my current executive profile.">Die Inhalte basieren auf den beschriebenen Rollen, Verantwortlichkeiten und ausgewählten Erfolgen aus meinem aktuellen Executive-Profil.</p>
-    </div>
-
+  <section class="panel section">
+    <div class="section-header"><h2 class="section-title" data-de="Ausgewählte Cases" data-en="Selected Cases">Ausgewählte Cases</h2><p class="section-intro" data-de="Ausgewählte Rollen, Verantwortlichkeiten und Erfolge aus meinem Executive-Profil." data-en="Selected roles, responsibilities and achievements from my executive profile.">Ausgewählte Rollen, Verantwortlichkeiten und Erfolge aus meinem Executive-Profil.</p></div>
     <div class="case-grid">
       <article class="case-card">
-        <div class="case-number">01</div>
-        <div class="case-meta">CONPUR GmbH · Sept. 2019 – Aug. 2025</div>
-        <h3>CONPUR</h3>
-        <div class="case-role">CEO / CPTO</div>
+        <div class="case-head"><img class="case-logo" src="https://media.licdn.com/dms/image/v2/D4E0BAQFA4N1a4X2AHg/company-logo_200_200/company-logo_200_200/0/1698302293501/conpur_logo?e=1788998400&v=beta&t=Y_NFDeAiNPK_CKvPUb4VIHAzVj8O9ABWFccYmJUAfuQ" alt="CONPUR logo"><div><div class="case-meta">CONPUR GmbH · Sept. 2019 – Aug. 2025</div><h3>CONPUR</h3><div class="case-role">CEO / CPTO</div></div></div>
         <p data-de="Transformation eines extern entwickelten MVP zu einer skalierbaren AI-native B2B SaaS-Plattform. Produkt-, Technologie- und kommerzielle Prioritäten wurden auf Venture-Wachstum, Investor Readiness und kommerzielle Skalierung ausgerichtet." data-en="Transformed an externally developed MVP into a scalable AI-native B2B SaaS platform. Aligned product, technology and commercial priorities to support venture growth, investor readiness and commercial scaling.">Transformation eines extern entwickelten MVP zu einer skalierbaren AI-native B2B SaaS-Plattform. Produkt-, Technologie- und kommerzielle Prioritäten wurden auf Venture-Wachstum, Investor Readiness und kommerzielle Skalierung ausgerichtet.</p>
-        <div class="case-label" data-de="Ausgewählte Erfolge" data-en="Selected achievements">Ausgewählte Erfolge</div>
-        <ul>
-          <li data-de="Enterprise-Kunden von 0 auf 30" data-en="Grew enterprise customer base from 0 to 30">Enterprise-Kunden von 0 auf 30</li>
-          <li data-de="Revenue um 120 % gesteigert" data-en="Increased revenue by 120%">Revenue um 120 % gesteigert</li>
-          <li data-de="Engineering-Organisation auf 20+ FTE aufgebaut" data-en="Built engineering organization to 20+ FTE">Engineering-Organisation auf 20+ FTE aufgebaut</li>
-          <li data-de="€5M+ Seed & Series A Fundraising unterstützt" data-en="Supported €5M+ Seed & Series A fundraising">€5M+ Seed & Series A Fundraising unterstützt</li>
-          <li data-de="Erfolgreiche Technology Asset Transaction geführt" data-en="Led successful technology asset transaction">Erfolgreiche Technology Asset Transaction geführt</li>
-        </ul>
-        <div class="case-tech">AWS · Google Cloud · Agentic Workflows & LLMs · SaaS · APIs · Procurement Tech · Product Strategy · Process Automation</div>
+        <div class="case-label" data-de="Ausgewählte Erfolge" data-en="Selected achievements">Ausgewählte Erfolge</div><ul>
+          <li data-de="Enterprise-Kunden von 0 auf 30" data-en="Grew enterprise customer base from 0 to 30">Enterprise-Kunden von 0 auf 30</li><li data-de="Revenue um 120 % gesteigert" data-en="Increased revenue by 120%">Revenue um 120 % gesteigert</li><li data-de="Engineering-Organisation auf 20+ FTE aufgebaut" data-en="Built engineering organization to 20+ FTE">Engineering-Organisation auf 20+ FTE aufgebaut</li><li data-de="€5M+ Seed & Series A Fundraising unterstützt" data-en="Supported €5M+ Seed & Series A fundraising">€5M+ Seed & Series A Fundraising unterstützt</li><li data-de="Erfolgreiche Technology Asset Transaction geführt" data-en="Led successful technology asset transaction">Erfolgreiche Technology Asset Transaction geführt</li>
+        </ul><div class="case-tech">AWS · Google Cloud · Agentic Workflows & LLMs · SaaS · APIs · Procurement Tech · Product Strategy · Process Automation</div>
       </article>
 
       <article class="case-card">
-        <div class="case-number">02</div>
-        <div class="case-meta">NUKI Home Solutions GmbH · Jan. 2016 – Dec. 2018</div>
-        <h3>NUKI</h3>
-        <div class="case-role">COO</div>
-        <p data-de="Skalierung der operativen Fähigkeiten während einer Hypergrowth-Phase von 10 auf mehr als 100 Mitarbeiter. Aufbau von Produktion, Supply Chain und Customer Operations für die internationale Expansion." data-en="Scaled operational capabilities during hypergrowth from 10 to more than 100 employees. Built production, supply chain and customer operations to support international expansion.">Skalierung der operativen Fähigkeiten während einer Hypergrowth-Phase von 10 auf mehr als 100 Mitarbeiter. Aufbau von Produktion, Supply Chain und Customer Operations für die internationale Expansion.</p>
-        <div class="case-label" data-de="Ausgewählte Schwerpunkte" data-en="Selected focus areas">Ausgewählte Schwerpunkte</div>
-        <ul>
-          <li data-de="SAP zur Skalierung implementiert" data-en="Implemented SAP to enable scaling">SAP zur Skalierung implementiert</li>
-          <li data-de="Globale Supply-Chain-Partnerschaften entwickelt" data-en="Developed global supply chain partnerships">Globale Supply-Chain-Partnerschaften entwickelt</li>
-          <li data-de="Qualitätsmanagementsysteme eingeführt" data-en="Established quality management systems">Qualitätsmanagementsysteme eingeführt</li>
-          <li data-de="Hardware-Software-Integration skaliert" data-en="Scaled hardware-software integration">Hardware-Software-Integration skaliert</li>
-          <li data-de="Internationalen Customer Support aufgebaut" data-en="Established global customer support">Internationalen Customer Support aufgebaut</li>
-        </ul>
-        <div class="case-tech">SAP · Smart Home · Production Scaling · International Sourcing · Operational Excellence · Process Optimization · Quality Management</div>
+        <div class="case-head"><div class="case-logo wordmark">NUKI</div><div><div class="case-meta">NUKI Home Solutions GmbH · Jan. 2016 – Dec. 2018</div><h3>NUKI</h3><div class="case-role">COO</div></div></div>
+        <p data-de="Skalierung der operativen Fähigkeiten während einer Hypergrowth-Phase von 10 auf mehr als 100 Mitarbeiter. Verantwortlich für die gesamte Supply Chain sowie für die Steuerung der externen Entwicklungspartner in Europa und China." data-en="Scaled operational capabilities during hypergrowth from 10 to more than 100 employees. Responsible for the entire supply chain and for managing external development partners across Europe and China.">Skalierung der operativen Fähigkeiten während einer Hypergrowth-Phase von 10 auf mehr als 100 Mitarbeiter. Verantwortlich für die gesamte Supply Chain sowie für die Steuerung der externen Entwicklungspartner in Europa und China.</p>
+        <div class="case-label" data-de="Ausgewählte Schwerpunkte" data-en="Selected focus areas">Ausgewählte Schwerpunkte</div><ul>
+          <li data-de="SAP zur Skalierung implementiert" data-en="Implemented SAP to enable scaling">SAP zur Skalierung implementiert</li><li data-de="Gesamte Supply Chain verantwortet" data-en="Responsible for the entire supply chain">Gesamte Supply Chain verantwortet</li><li data-de="Externe Entwicklungspartner in Europa und China gesteuert" data-en="Managed external development partners across Europe and China">Externe Entwicklungspartner in Europa und China gesteuert</li><li data-de="Qualitätsmanagementsysteme eingeführt" data-en="Established quality management systems">Qualitätsmanagementsysteme eingeführt</li><li data-de="Internationalen Customer Support aufgebaut" data-en="Established global customer support">Internationalen Customer Support aufgebaut</li>
+        </ul><div class="case-tech">SAP · Smart Home · Supply Chain · Production Scaling · International Sourcing · Operational Excellence · Quality Management</div>
       </article>
 
       <article class="case-card">
-        <div class="case-number">03</div>
-        <div class="case-meta">Skiline Systems GmbH · Sep. 2010 – Dec. 2013</div>
-        <h3>Skiline</h3>
-        <div class="case-role">CTO / Lead System Architect</div>
+        <div class="case-head"><div class="case-logo wordmark">SKILINE</div><div><div class="case-meta">Skiline Systems GmbH · Sep. 2010 – Dec. 2013</div><h3>Skiline</h3><div class="case-role">CTO / Lead System Architect</div></div></div>
         <p data-de="Aufbau einer der frühen cloud-nativen Video-Plattformen für die Skiindustrie. Verbindung von lokalem Edge Processing mit skalierbarer Enterprise-Backend-Architektur und internationalen Rollouts." data-en="Built one of the early cloud-native video platforms for the ski industry, combining local edge processing with scalable enterprise backend architecture and international rollouts.">Aufbau einer der frühen cloud-nativen Video-Plattformen für die Skiindustrie. Verbindung von lokalem Edge Processing mit skalierbarer Enterprise-Backend-Architektur und internationalen Rollouts.</p>
-        <div class="case-label" data-de="Ausgewählte Erfolge" data-en="Selected achievements">Ausgewählte Erfolge</div>
-        <ul>
-          <li data-de="15-köpfiges Development-Team aufgebaut und geführt" data-en="Built and led a 15-person development team">15-köpfiges Development-Team aufgebaut und geführt</li>
-          <li data-de="Custom Autoscaling-System auf AWS entwickelt" data-en="Designed and implemented a custom autoscaling system on AWS">Custom Autoscaling-System auf AWS entwickelt</li>
-          <li data-de="Sichere REST APIs mit Retry-Mechanismen entwickelt" data-en="Developed secure REST APIs with retry mechanisms">Sichere REST APIs mit Retry-Mechanismen entwickelt</li>
-          <li data-de="Token-basierte Authentifizierung eingeführt" data-en="Introduced token-based authentication">Token-basierte Authentifizierung eingeführt</li>
-          <li data-de="Internationale Rollouts umgesetzt" data-en="Executed international rollouts">Internationale Rollouts umgesetzt</li>
-        </ul>
-        <div class="case-tech">.NET · Enterprise Java · REST APIs · AWS · Autoscaling · Load Balancing · Token Authentication · Data Encryption</div>
+        <div class="case-label" data-de="Ausgewählte Erfolge" data-en="Selected achievements">Ausgewählte Erfolge</div><ul>
+          <li data-de="15-köpfiges Development-Team aufgebaut und geführt" data-en="Built and led a 15-person development team">15-köpfiges Development-Team aufgebaut und geführt</li><li data-de="Custom Autoscaling-System auf AWS entwickelt" data-en="Designed and implemented a custom autoscaling system on AWS">Custom Autoscaling-System auf AWS entwickelt</li><li data-de="Sichere REST APIs mit Retry-Mechanismen entwickelt" data-en="Developed secure REST APIs with retry mechanisms">Sichere REST APIs mit Retry-Mechanismen entwickelt</li><li data-de="Token-basierte Authentifizierung eingeführt" data-en="Introduced token-based authentication">Token-basierte Authentifizierung eingeführt</li><li data-de="Internationale Rollouts umgesetzt" data-en="Executed international rollouts">Internationale Rollouts umgesetzt</li>
+        </ul><div class="case-tech">.NET · Enterprise Java · REST APIs · AWS · Autoscaling · Load Balancing · Token Authentication · Data Encryption</div>
       </article>
 
       <article class="case-card">
-        <div class="case-number">04</div>
-        <div class="case-meta">SOLSO Consulting · Jan. 2014 – present</div>
-        <h3>SOLSO Consulting</h3>
-        <div class="case-role">CEO & Strategy Consultant</div>
+        <div class="case-head"><div class="case-logo wordmark">SOLSO</div><div><div class="case-meta">SOLSO Consulting · Jan. 2014 – present</div><h3>SOLSO Consulting</h3><div class="case-role">CEO & Strategy Consultant</div></div></div>
         <p data-de="Beratung von Foundern, CEOs und Investoren zu Technology Strategy, Product Innovation, Organizational Scaling und internationaler Marktexpansion in Europa, USA und Asien." data-en="Advised founders, CEOs and investors on technology strategy, product innovation, organizational scaling and international market expansion across Europe, the USA and Asia.">Beratung von Foundern, CEOs und Investoren zu Technology Strategy, Product Innovation, Organizational Scaling und internationaler Marktexpansion in Europa, USA und Asien.</p>
-        <div class="case-label" data-de="Ausgewählte Schwerpunkte" data-en="Selected focus areas">Ausgewählte Schwerpunkte</div>
-        <ul>
-          <li data-de="AI Strategy, AI Adoption und LLM Integration" data-en="AI strategy, AI adoption and LLM integration">AI Strategy, AI Adoption und LLM Integration</li>
-          <li data-de="AI Agent Architectures und AI Innovation Projects" data-en="AI agent architectures and AI innovation projects">AI Agent Architectures und AI Innovation Projects</li>
-          <li data-de="Platform Strategies und technische Roadmaps für B2B und B2C" data-en="Platform strategies and technical roadmaps for B2B and B2C">Platform Strategies und technische Roadmaps für B2B und B2C</li>
-          <li data-de="M&A Prozesse, Due Diligence und Post-Merger Integration" data-en="M&A processes, due diligence and post-merger integration">M&A Prozesse, Due Diligence und Post-Merger Integration</li>
-          <li data-de="Internationale Rollouts und Cross-Border-Projekte" data-en="International rollouts and cross-border projects">Internationale Rollouts und Cross-Border-Projekte</li>
-        </ul>
-        <div class="case-tech">AI Integration & Agent Design · Digital Strategy · Platform Design · Business Model Innovation · Agile Transformation · M&A Advisory · Technology Roadmapping</div>
+        <div class="case-label" data-de="Ausgewählte Schwerpunkte" data-en="Selected focus areas">Ausgewählte Schwerpunkte</div><ul>
+          <li data-de="AI Strategy, AI Adoption und LLM Integration" data-en="AI strategy, AI adoption and LLM integration">AI Strategy, AI Adoption und LLM Integration</li><li data-de="AI Agent Architectures und AI Innovation Projects" data-en="AI agent architectures and AI innovation projects">AI Agent Architectures und AI Innovation Projects</li><li data-de="Platform Strategies und technische Roadmaps für B2B und B2C" data-en="Platform strategies and technical roadmaps for B2B and B2C">Platform Strategies und technische Roadmaps für B2B und B2C</li><li data-de="M&A Prozesse, Due Diligence und Post-Merger Integration" data-en="M&A processes, due diligence and post-merger integration">M&A Prozesse, Due Diligence und Post-Merger Integration</li><li data-de="Internationale Rollouts und Cross-Border-Projekte" data-en="International rollouts and cross-border projects">Internationale Rollouts und Cross-Border-Projekte</li>
+        </ul><div class="case-tech">AI Integration & Agent Design · Digital Strategy · Platform Design · Business Model Innovation · Agile Transformation · M&A Advisory · Technology Roadmapping</div>
       </article>
     </div>
-    <a class="back" href="index.html">← <span data-de="Zurück zur Website" data-en="Back to website">Zurück zur Website</span></a>
   </section>
 
-  <div class="footer">
-    Richard Liehmann · Berlin · Deutschland<br>
-    <a class="mail-btn" href="mailto:r.liehmann@solso.com">Kontakt</a>
-  </div>
-</div>
-</div>
+  <section class="panel logo-section" id="clients">
+    <div class="section-header"><h2 class="section-title" data-de="Kunden & Referenzen" data-en="Clients & References">Kunden & Referenzen</h2><p class="section-intro" data-de="Auszug der Kunden aus der bestehenden Referenzsektion der Website." data-en="Selected clients from the existing references section of the website.">Auszug der Kunden aus der bestehenden Referenzsektion der Website.</p></div>
+    <div class="logo-grid">
+      <a class="logo-item" href="https://www.atomic.com" target="_blank" rel="noopener"><span>ATOMIC</span></a>
+      <a class="logo-item" href="https://sanhua-aweco.com" target="_blank" rel="noopener"><span>AWECO Appliance Systems</span></a>
+      <a class="logo-item" href="https://www.skidata.com" target="_blank" rel="noopener"><span>SKIDATA</span></a>
+      <a class="logo-item" href="https://www.sonydadc.com" target="_blank" rel="noopener"><span>SONY DADC</span></a>
+      <a class="logo-item" href="https://www.tttech.com" target="_blank" rel="noopener"><span>TTTECH</span></a>
+      <a class="logo-item" href="https://www.assaabloy.com" target="_blank" rel="noopener"><span>ASSA ABLOY</span></a>
+      <a class="logo-item" href="https://www.conrad.de" target="_blank" rel="noopener"><span>CONRAD</span></a>
+      <a class="logo-item" href="https://www.alturos.com" target="_blank" rel="noopener"><span>ALTUROS</span></a>
+      <a class="logo-item" href="https://nuki.io" target="_blank" rel="noopener"><span>NUKI</span></a>
+      <a class="logo-item" href="https://aquis-systems.com" target="_blank" rel="noopener"><span>AQUIS SYSTEMS</span></a>
+      <a class="logo-item" href="https://futurycapital.vc" target="_blank" rel="noopener"><span>FUTURY CAPITAL</span></a>
+    </div>
+    <p class="logo-note" data-de="Die Referenzen entsprechen dem bestehenden Kunden-Auszug der Website; die Darstellung bleibt bewusst zurückhaltend und folgt dem bestehenden hellen Layout." data-en="The references match the existing client selection on the website; the presentation remains deliberately restrained and follows the existing light layout.">Die Referenzen entsprechen dem bestehenden Kunden-Auszug der Website; die Darstellung bleibt bewusst zurückhaltend und folgt dem bestehenden hellen Layout.</p>
+  </section>
+
+  <a class="back" href="index.html">← <span data-de="Zurück zur Website" data-en="Back to website">Zurück zur Website</span></a>
+  <div class="footer">Ing. Richard Liehmann · Berlin · Deutschland<br><a class="mail-btn" href="mailto:r.liehmann@solso.com">Kontakt</a></div>
+</div></div>
 <script>
-const buttons = { de: document.getElementById('de'), en: document.getElementById('en') };
-function setLanguage(lang) {
-  document.documentElement.lang = lang;
-  document.querySelectorAll('[data-de]').forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
-  buttons.de.classList.toggle('active', lang === 'de');
-  buttons.en.classList.toggle('active', lang === 'en');
-  localStorage.setItem('site-language', lang);
-}
-buttons.de.addEventListener('click', () => setLanguage('de'));
-buttons.en.addEventListener('click', () => setLanguage('en'));
-const saved = localStorage.getItem('site-language');
-setLanguage(saved === 'en' ? 'en' : 'de');
+const buttons={de:document.getElementById('de'),en:document.getElementById('en')};
+function setLanguage(lang){document.documentElement.lang=lang;document.querySelectorAll('[data-de]').forEach(el=>el.textContent=el.getAttribute('data-'+lang));buttons.de.classList.toggle('active',lang==='de');buttons.en.classList.toggle('active',lang==='en');localStorage.setItem('site-language',lang)}
+buttons.de.addEventListener('click',()=>setLanguage('de'));buttons.en.addEventListener('click',()=>setLanguage('en'));setLanguage(localStorage.getItem('site-language')==='en'?'en':'de');
 </script>
-</body>
-</html>
+</body></html>
